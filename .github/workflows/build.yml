@@ -102,7 +102,7 @@ jobs:
           
           # Initialize and sync kernel source
           echo "Initializing and syncing kernel source..."
-          $REPO init -u https://github.com/fatalcoder524/OP9_KSUN_SUSFS.git -b main -m manifest.xml --repo-rev=v2.16 --depth=1 --no-clone-bundle --no-tags
+          $REPO init -u https://github.com/fatalcoder524/OP9_KSUN_SUSFS.git -b oos-14-op9 -m manifest.xml --repo-rev=v2.16 --depth=1 --no-clone-bundle --no-tags
           
           # Sync repo and apply patches
           $REPO --trace sync -c --no-clone-bundle --no-tags --optimized-fetch -j$(nproc --all) --fail-fast
@@ -237,7 +237,7 @@ jobs:
           cd "$CONFIG"
           sed -i s/build-user/fatalcoder524/g build/_setup_env.sh
           sed -i s/build-host/oos/g build/_setup_env.sh
-          cp $GITHUB_WORKSPACE/build.config.lemonadep ./kernel/msm-5.4/build.config.lemonadep
+          cp $GITHUB_WORKSPACE/build.config.lemonade ./kernel/msm-5.4/build.config.lemonade
           patch -p1 -F 3 < $GITHUB_WORKSPACE/Patches/fix_op9p_build_errors.patch
           patch -p1 --binary -F 3 < $GITHUB_WORKSPACE/Patches/si_audo_codec_build.patch
           sed -i 's/^UAPI_CFLAGS :=.*/& -Wno-gnu-variable-sized-type-not-at-end/' ./kernel/msm-5.4/usr/include/Makefile
@@ -254,7 +254,7 @@ jobs:
           echo "SUBARCH=arm64" >> $GITHUB_ENV
           
           # Export build configuration variables
-          export BUILD_CONFIG=kernel/msm-5.4/build.config.lemonadep
+          export BUILD_CONFIG=kernel/msm-5.4/build.config.lemonade
           export VARIANT=qgki
           export BUILTIN=1
           export LTO=thin
@@ -282,7 +282,7 @@ jobs:
           # export AS=aarch64-linux-gnu-as
           
           # Append build configuration variables to $GITHUB_ENV
-          echo "BUILD_CONFIG=kernel/msm-5.4/build.config.lemonadep" >> $GITHUB_ENV
+          echo "BUILD_CONFIG=kernel/msm-5.4/build.config.lemonade" >> $GITHUB_ENV
           echo "VARIANT=qgki" >> $GITHUB_ENV
           echo "BUILTIN=1" >> $GITHUB_ENV
           echo "LTO=thin" >> $GITHUB_ENV
