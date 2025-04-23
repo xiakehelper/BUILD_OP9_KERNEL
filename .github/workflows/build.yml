@@ -118,7 +118,7 @@ jobs:
           cd "$CONFIG/kernel/msm-5.4"
           
           echo "Adding KernelSU..."
-          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s next-susfs-dev
+          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s next
           
           git submodule update --init --recursive
           cd KernelSU-Next/kernel
