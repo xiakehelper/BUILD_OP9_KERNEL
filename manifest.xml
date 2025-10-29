@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="aosp"   fetch="https://android.googlesource.com/" />
-  <remote name="statix" fetch="https://github.com/StatiXOS/" revision="tm" />
   <remote name="gitlab" fetch="https://gitlab.com/" />
   <remote name="github" fetch="https://github.com/" />
   
@@ -26,13 +25,4 @@
     <linkfile src="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" dest="kernel/msm-5.4/drivers/staging/qca-wifi-host-cmn" />
     <linkfile src="vendor/qcom/opensource/wlan/utils" dest="kernel/msm-5.4/drivers/staging/utils" />
   </project>
-  
-  <!-- AnyKernel3 -->
-  <project path="AnyKernel3" name="TheWildJames/AnyKernel3" remote="github" revision="gki" clone-depth="1" />
-  
-  <!-- kernel_patches -->
-  <project path="kernel_patches" name="TheWildJames/kernel_patches" remote="github" revision="main" clone-depth="1" />
-  
-  <!-- susfs4ksu -->
-  <project path="susfs4ksu" name="simonpunk/susfs4ksu" remote="gitlab" revision="kernel-5.4" clone-depth="1" />
 </manifest>
