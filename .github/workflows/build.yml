@@ -222,4 +222,4 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
          name: "lemonadep-ksun-release-${{ env.KSUNVER }}-zip"
-         path: ${{ env.CONFIG }}/AnyKernel3/*.zip
+         path: ${{ env.CONFIG }}/MyKernel/*.zip
