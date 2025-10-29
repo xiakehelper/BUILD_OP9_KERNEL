@@ -1,2 +1,2 @@
-# OP9_KSUN_SUSFS
-Build Stock OOS Kernel with KernelSU Next and SUSFS
+# BUILD_OP9_KERNEL
+Build OP9 OOS Kernel
