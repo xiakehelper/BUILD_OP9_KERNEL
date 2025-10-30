@@ -158,6 +158,30 @@ jobs:
           echo "CONFIG_EXT4_FS_SECURITY=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_VXLAN=y" >> ./arch/arm64/configs/gki_defconfig
 
+          echo "CONFIG_BRIDGE_VLAN_FILTERING=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CRYPTO=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CRYPTO_AEAD=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CRYPTO_GCM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CRYPTO_SEQIV=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CRYPTO_GHASH=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_XFRM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_XFRM_USER=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_XFRM_ALGO=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_INET_ESP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_INET_XFRM_MODE_TRANSPORT=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_IPVLAN=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_MACVLAN=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DUMMY=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_NAT_FTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_CONNTRACK_FTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_NAT_TFTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_CONNTRACK_TFTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_AUFS_FS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BTRFS_FS=y" >> ./arch/arm64/configs/gki_defconfig          
+          echo "CONFIG_BTRFS_FS_POSIX_ACL=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV_DM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DM_THIN_PROVISIONING=y" >> ./arch/arm64/configs/gki_defconfig
+
           
           # Add QCOM Heep config setting
           echo "CONFIG_DMABUF_HEAPS=y" >> ./arch/arm64/configs/gki_defconfig
