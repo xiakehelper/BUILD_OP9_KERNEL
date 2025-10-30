@@ -158,7 +158,6 @@ jobs:
           echo "CONFIG_EXT4_FS_SECURITY=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_VXLAN=y" >> ./arch/arm64/configs/gki_defconfig
 
-          # TEST
           echo "CONFIG_BRIDGE_VLAN_FILTERING=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_CRYPTO=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_CRYPTO_AEAD=y" >> ./arch/arm64/configs/gki_defconfig
@@ -171,7 +170,16 @@ jobs:
           echo "CONFIG_INET_ESP=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_INET_XFRM_MODE_TRANSPORT=y" >> ./arch/arm64/configs/gki_defconfig
 
-
+          # TEST
+          echo "CONFIG_IPVLAN=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_MACVLAN=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DUMMY=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_NAT_FTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_CONNTRACK_FTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_NAT_TFTP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NF_CONNTRACK_TFTP=y" >> ./arch/arm64/configs/gki_defconfig
+          
+       
           # END
           
           echo "CONFIG_OVERLAY_FS=y" >> ./arch/arm64/configs/gki_defconfig
