@@ -180,7 +180,7 @@ jobs:
           
           # TEST        
           echo "CONFIG_AUFS_FS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_BTRFS_FS=y" >> ./arch/arm64/configs/gki_defconfig 
+          echo "CONFIG_BTRFS_FS_POSIX_ACL=y" >> ./arch/arm64/configs/gki_defconfig
           # END
           echo "CONFIG_BLK_DEV_DM=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_DM_THIN_PROVISIONING=y" >> ./arch/arm64/configs/gki_defconfig
