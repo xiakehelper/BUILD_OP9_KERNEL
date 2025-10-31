@@ -179,10 +179,12 @@ jobs:
           echo "CONFIG_NF_CONNTRACK_TFTP=y" >> ./arch/arm64/configs/gki_defconfig
           
           # TEST        
+          echo "CONFIG_AUFS_FS=y" >> ./arch/arm64/configs/gki_defconfig
+
+          # END
           echo "CONFIG_BLK_DEV_DM=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_DM_THIN_PROVISIONING=y" >> ./arch/arm64/configs/gki_defconfig
-       
-          # END
+
           
           echo "CONFIG_OVERLAY_FS=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_IP_SET=y" >> ./arch/arm64/configs/gki_defconfig
