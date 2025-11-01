@@ -99,57 +99,39 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 2.2
-          echo "CONFIG_ARCH_SUPPORTS_ACPI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_IRQ_BYPASS_MANAGER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIRTUALIZATION=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_KVM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_IRQCHIP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_IRQFD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_IRQ_ROUTING=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_EVENTFD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_KVM_MMIO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_MSI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_CPU_RELAX_INTERCEPT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_KVM_VFIO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_ARCH_TLB_FLUSH_ALL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_KVM_GENERIC_DIRTYLOG_READ_PROTECT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_IRQ_BYPASS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KVM_VCPU_RUN_PID_CHANGE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_GH_ARM64_DRV=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_CRYPTO_SHA256_ARM64=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_CRYPTO_AES_ARM64_CE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_CRYPTO_CHACHA20_NEON=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_CRYPTO_POLY1305_NEON=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SET_FS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_UPROBES=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_EFFICIENT_UNALIGNED_ACCESS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KPROBES=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_KRETPROBES=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_FUNCTION_ERROR_INJECTION=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_NMI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_TRACEHOOK=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_DMA_CONTIGUOUS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_GENERIC_SMP_IDLE_THREAD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_GENERIC_IDLE_POLL_SETUP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ARCH_HAS_FORTIFY_SOURCE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ARCH_HAS_KEEPINITRD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ARCH_HAS_SET_MEMORY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ARCH_HAS_SET_DIRECT_MAP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_THREAD_STRUCT_WHITELIST=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ASM_MODVERSIONS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_REGS_AND_STACK_ACCESS_API=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_RSEQ=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_FUNCTION_ARG_ACCESS_API=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_HW_BREAKPOINT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_PERF_REGS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_PERF_USER_STACK_DUMP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_JUMP_LABEL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_JUMP_LABEL_RELATIVE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MMU_GATHER_TABLE_FREE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MMU_GATHER_RCU_TABLE_FREE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ARCH_HAVE_NMI_SAFE_CMPXCHG=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ALIGNED_STRUCT_PAGE=y" >> ./arch/arm64/configs/gki_defconfig
+          # 2.3
+          echo "CONFIG_HAVE_CMPXCHG_LOCAL=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_CMPXCHG_DOUBLE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_WANT_COMPAT_IPC_PARSE_VERSION=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_SECCOMP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_SECCOMP_FILTER=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_SECCOMP_FILTER=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_STACKLEAK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_STACKPROTECTOR=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_STACKPROTECTOR=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_STACKPROTECTOR_STRONG=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_SUPPORTS_SHADOW_CALL_STACK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_SUPPORTS_LTO_CLANG=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_SUPPORTS_LTO_CLANG_THIN=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAS_LTO_CLANG=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_LTO_NONE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_CONTEXT_TRACKING=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_VIRT_CPU_ACCOUNTING_GEN=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_IRQ_TIME_ACCOUNTING=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_MOVE_PUD=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_MOVE_PMD=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_TRANSPARENT_HUGEPAGE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_HUGE_VMAP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_MOD_ARCH_SPECIFIC=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_MODULES_USE_ELF_RELA=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_HAS_ELF_RANDOMIZE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_MMAP_RND_BITS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_MMAP_RND_BITS=18" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HAVE_ARCH_MMAP_RND_COMPAT_BITS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_MMAP_RND_COMPAT_BITS=11" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_WANT_DEFAULT_TOPDOWN_MMAP_LAYOUT=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CLONE_BACKWARDS=y" >> ./arch/arm64/configs/gki_defconfig
+
 
           
       - name: Run sed and perl Commands
