@@ -99,9 +99,9 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 2.9
-          echo "CONFIG_ARCH_SUPPORTS_LTO_CLANG_THIN=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAS_LTO_CLANG=y" >> ./arch/arm64/configs/gki_defconfig
+          # 2.10
+          echo "CONFIG_LTO_NONE=y" >> ./arch/arm64/configs/gki_defconfig         
+
 
           
       - name: Run sed and perl Commands
