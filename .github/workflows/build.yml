@@ -99,15 +99,12 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 2.7
-          echo "CONFIG_HAVE_CMPXCHG_LOCAL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_CMPXCHG_DOUBLE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ARCH_WANT_COMPAT_IPC_PARSE_VERSION=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_SECCOMP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_SECCOMP_FILTER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SECCOMP_FILTER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_ARCH_STACKLEAK=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_STACKPROTECTOR=y" >> ./arch/arm64/configs/gki_defconfig
+          # 2.8
+          echo "CONFIG_STACKPROTECTOR=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_STACKPROTECTOR_STRONG=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_SUPPORTS_SHADOW_CALL_STACK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ARCH_SUPPORTS_LTO_CLANG=y" >> ./arch/arm64/configs/gki_defconfig
+
 
           
       - name: Run sed and perl Commands
