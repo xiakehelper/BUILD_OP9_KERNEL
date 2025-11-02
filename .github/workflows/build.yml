@@ -99,11 +99,9 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 4.10
-          echo "CONFIG_OF_NET=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_RESERVED_MEM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_RESERVED_MEM_CHECK=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_BLK_DEV=y" >> ./arch/arm64/configs/gki_defconfig
+          # 4.11
+          echo "CONFIG_ZRAM_WRITEBACK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV_RAM_COUNT=16" >> ./arch/arm64/configs/gki_defconfig
 
           
       - name: Run sed and perl Commands
