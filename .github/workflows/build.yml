@@ -99,9 +99,8 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 4.11
-          # echo "CONFIG_ZRAM_WRITEBACK=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_BLK_DEV_RAM_COUNT=16" >> ./arch/arm64/configs/gki_defconfig
+          # 4.12
+          echo "CONFIG_NVME_CORE=y" >> ./arch/arm64/configs/gki_defconfig
 
           
       - name: Run sed and perl Commands
