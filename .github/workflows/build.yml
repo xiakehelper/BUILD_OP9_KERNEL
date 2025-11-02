@@ -99,32 +99,20 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 4.4
-          echo "CONFIG_WANT_DEV_COREDUMP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ALLOW_DEV_COREDUMP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DEV_COREDUMP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SYS_HYPERVISOR=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_GENERIC_CPU_AUTOPROBE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_GENERIC_CPU_VULNERABILITIES=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SOC_BUS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_REGMAP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_REGMAP_I2C=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_REGMAP_SPI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_REGMAP_SPMI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_REGMAP_MMIO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_REGMAP_IRQ=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DMA_SHARED_BUFFER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_GENERIC_ARCH_TOPOLOGY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_EBI2=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MHI_BUS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MHI_BUS_MISC=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DTC=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_FLATTREE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_EARLY_FLATTREE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_KOBJ=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_ADDRESS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_OF_IRQ=y" >> ./arch/arm64/configs/gki_defconfig
+          # 4.5
+          echo "CONFIG_OF_NET=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_OF_RESERVED_MEM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_OF_RESERVED_MEM_CHECK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ZRAM_WRITEBACK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV_RAM_COUNT=16" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NVME_CORE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV_NVME=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NVME_HWMON=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_SRAM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_QSEECOM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HDCP_QSEECOM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_SCSI_MOD=y" >> ./arch/arm64/configs/gki_defconfig
 
           
       - name: Run sed and perl Commands
