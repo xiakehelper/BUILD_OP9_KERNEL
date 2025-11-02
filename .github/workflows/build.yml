@@ -99,13 +99,11 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 4.9
-          echo "CONFIG_BLK_DEV_NVME=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_NVME_HWMON=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SRAM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QSEECOM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HDCP_QSEECOM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SCSI_MOD=y" >> ./arch/arm64/configs/gki_defconfig
+          # 4.10
+          echo "CONFIG_OF_NET=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_OF_RESERVED_MEM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_OF_RESERVED_MEM_CHECK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV=y" >> ./arch/arm64/configs/gki_defconfig
 
           
       - name: Run sed and perl Commands
