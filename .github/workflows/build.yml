@@ -99,19 +99,14 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 4.7
-          echo "CONFIG_SCSI_DMA=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_CHR_DEV_SG=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SCSI_LOWLEVEL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_UFS_DBG=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SCSI_UFS_QCOM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SCSI_UFS_CRYPTO_QTI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SCSI_UFS_HPB=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HAVE_PATA_PLATFORM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_BLK_DEV_DM_BUILTIN=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DM_BUFIO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DM_BIO_PRISON=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DM_PERSISTENT_DATA=y" >> ./arch/arm64/configs/gki_defconfig
+          # 4.8
+          echo "CONFIG_OF_NET=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_OF_RESERVED_MEM=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_OF_RESERVED_MEM_CHECK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ZRAM_WRITEBACK=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_BLK_DEV_RAM_COUNT=16" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NVME_CORE=y" >> ./arch/arm64/configs/gki_defconfig
 
           
       - name: Run sed and perl Commands
