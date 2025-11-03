@@ -99,12 +99,9 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.14
-          echo "CONFIG_FRAMEBUFFER_CONSOLE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FRAMEBUFFER_CONSOLE_LEGACY_ACCELERATION=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FRAMEBUFFER_CONSOLE_DETECT_PRIMARY=y" >> ./arch/arm64/configs/gki_defconfig
-
-
+          # 6.15
+          echo "CONFIG_LOGO=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_LOGO_LINUX_MONO=y" >> ./arch/arm64/configs/gki_defconfig
 
 
           
