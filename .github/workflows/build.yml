@@ -99,19 +99,14 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.7   
-          echo "CONFIG_VIDEO_V4L2=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIDEO_V4L2_I2C=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_I2C_RTC6226_QCA=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIDEOBUF2_CORE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIDEOBUF2_V4L2=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIDEOBUF2_MEMOPS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIDEOBUF2_VMALLOC=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MSM_GLOBAL_SYNX=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_VIDEO_IR_I2C=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_MIPI_DSI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_KMS_HELPER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_KMS_FB_HELPER=y" >> ./arch/arm64/configs/gki_defconfig
+          # 6.8   
+          echo "CONFIG_DRM_FBDEV_EMULATION=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_FBDEV_OVERALLOC=100" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MSM_REGISTER_LOGGING=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MSM_DP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_PANEL=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_BRIDGE=y" >> ./arch/arm64/configs/gki_defconfig
+
 
 
           
