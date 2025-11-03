@@ -99,58 +99,32 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.4      
-          echo "CONFIG_LOGO_LINUX_CLUT224=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_TIMER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_PCM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_PCM_ELD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_PCM_IEC958=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_HWDEP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_RAWMIDI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_JACK=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_JACK_INPUT_DEV=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_PCM_TIMER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_MAX_CARDS=32" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_PROC_FS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_VERBOSE_PROCFS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_PCI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_HDA_PREALLOC_SIZE=64" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_SPI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_USB=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_USB_AUDIO_USE_MEDIA_CONTROLLER=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_SOC_I2C_AND_SPI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_SND_SOC_HDMI_CODEC=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HID=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HID_GENERIC=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HID_BETOP_FF=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HID_LOGITECH_HIDPP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_HID=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_OHCI_LITTLE_ENDIAN=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_SUPPORT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_COMMON=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_ARCH_HAS_HCD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_PCI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_ANNOUNCE_NEW_DEVICES=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_DEFAULT_PERSIST=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_AUTOSUSPEND_DELAY=2" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_XHCI_HCD=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_XHCI_PCI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_XHCI_PLATFORM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_EHCI_ROOT_HUB_TT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_EHCI_TT_NEWSCHED=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_EHCI_PCI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_ACM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_DWC3=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_DWC3_DUAL_ROLE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_DWC3_MSM=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_PHY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_NOP_USB_XCEIV=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_QCOM_EMU_PHY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_MSM_SSPHY_QMP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MSM_HSUSB_PHY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_MSM_EUSB2_PHY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_USB_GADGET_VBUS_DRAW=2" >> ./arch/arm64/configs/gki_defconfig
+          # 6.5      
+          echo "CONFIG_VIDEO_V4L2=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEO_V4L2_I2C=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_I2C_RTC6226_QCA=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_CORE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_V4L2=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_MEMOPS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_VMALLOC=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_MSM_GLOBAL_SYNX=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEO_IR_I2C=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MIPI_DSI=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_KMS_HELPER=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_KMS_FB_HELPER=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_FBDEV_EMULATION=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_FBDEV_OVERALLOC=100" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MSM_REGISTER_LOGGING=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MSM_DP=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_PANEL=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_BRIDGE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_PANEL_BRIDGE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_LONTIUM_LT9611UXC=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_PANEL_ORIENTATION_QUIRKS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_QCOM_KGSL=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DEVFREQ_GOV_QCOM_ADRENO_TZ=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DEVFREQ_GOV_QCOM_GPUBW_MON=y" >> ./arch/arm64/configs/gki_defconfig
+
 
           
       - name: Run sed and perl Commands
