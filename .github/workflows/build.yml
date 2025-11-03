@@ -99,20 +99,15 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.12
-          echo "CONFIG_QCOM_ADRENO_DEFAULT_GOVERNOR=\"msm-adreno-tz\"" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL_IOCOHERENCY_DEFAULT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL_IDLE_TIMEOUT=80" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL_SORT_POOL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CMDLINE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_NOTIFY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CFB_FILLRECT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CFB_COPYAREA=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CFB_IMAGEBLIT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_FILLRECT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_COPYAREA=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_IMAGEBLIT=y" >> ./arch/arm64/configs/gki_defconfig
+          # 6.13
+          echo "CONFIG_FB_SYS_FOPS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FB_DEFERRED_IO=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FB_MODE_HELPERS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_HDMI=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DUMMY_CONSOLE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DUMMY_CONSOLE_COLUMNS=80" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DUMMY_CONSOLE_ROWS=25" >> ./arch/arm64/configs/gki_defconfig
+
 
 
           
