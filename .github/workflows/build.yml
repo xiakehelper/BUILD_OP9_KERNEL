@@ -100,12 +100,9 @@ jobs:
 
           #Add Docker config setting
           # 6.9   
-          echo "CONFIG_DRM_PANEL_BRIDGE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_LONTIUM_LT9611UXC=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_PANEL_ORIENTATION_QUIRKS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DEVFREQ_GOV_QCOM_ADRENO_TZ=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DEVFREQ_GOV_QCOM_GPUBW_MON=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_FBDEV_EMULATION=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_FBDEV_OVERALLOC=100" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MSM_REGISTER_LOGGING=y" >> ./arch/arm64/configs/gki_defconfig
 
 
 
