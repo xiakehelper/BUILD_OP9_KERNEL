@@ -99,10 +99,9 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.10 
-          echo "CONFIG_DRM_MSM_DP=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_PANEL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DRM_BRIDGE=y" >> ./arch/arm64/configs/gki_defconfig
+          # 6.11 
+          echo "CONFIG_DRM_FBDEV_EMULATION=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_FBDEV_OVERALLOC=100" >> ./arch/arm64/configs/gki_defconfig
 
 
           
