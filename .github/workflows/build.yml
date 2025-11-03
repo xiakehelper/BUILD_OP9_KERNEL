@@ -99,14 +99,11 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.13
-          echo "CONFIG_FB_SYS_FOPS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_DEFERRED_IO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_MODE_HELPERS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HDMI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DUMMY_CONSOLE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DUMMY_CONSOLE_COLUMNS=80" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DUMMY_CONSOLE_ROWS=25" >> ./arch/arm64/configs/gki_defconfig
+          # 6.14
+          echo "CONFIG_FRAMEBUFFER_CONSOLE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FRAMEBUFFER_CONSOLE_LEGACY_ACCELERATION=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_FRAMEBUFFER_CONSOLE_DETECT_PRIMARY=y" >> ./arch/arm64/configs/gki_defconfig
+
 
 
 
