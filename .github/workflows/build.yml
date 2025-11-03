@@ -99,33 +99,20 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           #Add Docker config setting
-          # 6.6    
-          echo "CONFIG_QCOM_ADRENO_DEFAULT_GOVERNOR=\"msm-adreno-tz\"" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL_IOCOHERENCY_DEFAULT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL_IDLE_TIMEOUT=80" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_QCOM_KGSL_SORT_POOL=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CMDLINE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_NOTIFY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CFB_FILLRECT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CFB_COPYAREA=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_CFB_IMAGEBLIT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_FILLRECT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_COPYAREA=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_IMAGEBLIT=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_SYS_FOPS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_DEFERRED_IO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FB_MODE_HELPERS=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_HDMI=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DUMMY_CONSOLE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DUMMY_CONSOLE_COLUMNS=80" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_DUMMY_CONSOLE_ROWS=25" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FRAMEBUFFER_CONSOLE=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FRAMEBUFFER_CONSOLE_LEGACY_ACCELERATION=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_FRAMEBUFFER_CONSOLE_DETECT_PRIMARY=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_LOGO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_LOGO_LINUX_MONO=y" >> ./arch/arm64/configs/gki_defconfig
-          echo "CONFIG_LOGO_LINUX_VGA16=y" >> ./arch/arm64/configs/gki_defconfig
+          # 6.7   
+          echo "CONFIG_VIDEO_V4L2=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEO_V4L2_I2C=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_I2C_RTC6226_QCA=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_CORE=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_V4L2=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_MEMOPS=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEOBUF2_VMALLOC=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_MSM_GLOBAL_SYNX=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_VIDEO_IR_I2C=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_MIPI_DSI=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_KMS_HELPER=y" >> ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_DRM_KMS_FB_HELPER=y" >> ./arch/arm64/configs/gki_defconfig
+
 
           
       - name: Run sed and perl Commands
