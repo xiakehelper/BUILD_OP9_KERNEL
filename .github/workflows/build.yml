@@ -99,7 +99,7 @@ jobs:
           echo "Adding configuration settings to gki_defconfig..."
 
           # Add Docker config setting
-          echo "CONFIG_NAMESPACES=y" > ./arch/arm64/configs/gki_defconfig
+          echo "CONFIG_NAMESPACES=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_MULTIUSER=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_NET=y" >> ./arch/arm64/configs/gki_defconfig
           echo "CONFIG_NET_NS=y" >> ./arch/arm64/configs/gki_defconfig
@@ -282,9 +282,9 @@ jobs:
           
           echo "Running sed commands..."
           
-          #sed -i 's/CONFIG_LTO=n/CONFIG_LTO=y/' "./arch/arm64/configs/gki_defconfig"
-          #sed -i 's/CONFIG_LTO_CLANG_FULL=y/CONFIG_LTO_CLANG_THIN=y/' "./arch/arm64/configs/gki_defconfig"
-          #sed -i 's/CONFIG_LTO_CLANG_NONE=y/CONFIG_LTO_CLANG_THIN=y/' "./arch/arm64/configs/gki_defconfig"
+          sed -i 's/CONFIG_LTO=n/CONFIG_LTO=y/' "./arch/arm64/configs/gki_defconfig"
+          sed -i 's/CONFIG_LTO_CLANG_FULL=y/CONFIG_LTO_CLANG_THIN=y/' "./arch/arm64/configs/gki_defconfig"
+          sed -i 's/CONFIG_LTO_CLANG_NONE=y/CONFIG_LTO_CLANG_THIN=y/' "./arch/arm64/configs/gki_defconfig"
           
           # Run sed commands for modifications
           sed -i 's/check_defconfig//' ./build.config.gki
