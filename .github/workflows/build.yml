@@ -386,7 +386,7 @@ jobs:
         if: always()
         run: |
           cd "$CONFIG"
-          tar -czf kernel-source.tar.gz --exclude='.git' --exclude='out' --warning=no-file-changed ./out # ./kernel ./vendor
+          tar -czf kernel-source.tar.gz --exclude='.git' --exclude='out' --warning=no-file-changed ./ # ./kernel ./vendor
           ls -la
 
       - name: Upload Kernel Source Archive
